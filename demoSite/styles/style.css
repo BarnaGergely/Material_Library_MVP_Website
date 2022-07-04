@@ -101,7 +101,8 @@ h6 {
   margin: 1rem;
 }
 h1{
-  font-size: 2rem;
+  font-size: 2.2rem;
+  text-transform:none;
 }
 h2{
   font-size: 1.8rem;
