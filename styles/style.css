@@ -1,0 +1,124 @@
+/* Colors 
+:root {
+  --clr-light: #fdffc4;
+  --clr-dark: #121212;
+  --clr-primary: #dbffa2;
+  --clr-secondary: #c3fcf2;
+  --clr-accent: #ff7750;
+}
+*/
+
+/* ------------  Themes and Variables  ------------ */
+:root {
+  --font-size: 16px;
+  --pad-main: 1rem;
+  --brd-radius-main: 2rem;
+
+  font-size: var(--font-size);
+}
+
+/* Light Theme*/
+@media all and (prefers-color-scheme: light) {
+  :root {
+    --clr-text: black;
+    --clr-text-lighter: ;
+    --clr-link: ;
+    --clr-link-hover: ;
+    --clr-background: white;
+    --clr-background-lighter: ;
+    --clr-background-darker: ;
+  }
+
+  /* costum theme switch override: Dark theme */
+  :root.dark-theme {
+    --clr-text: white;
+    --clr-text-lighter: ;
+    --clr-link: ;
+    --clr-link-hover: ;
+    --clr-background: ;
+    --clr-background-lighter: ;
+    --clr-background-darker: ;
+  }
+}
+
+/* Dark Theme (not light) */
+@media not all and (prefers-color-scheme: light) {
+  :root {
+    --clr-text: white;
+    --clr-text-lighter: ;
+    --clr-link: ;
+    --clr-link-hover: ;
+    --clr-background: ;
+    --clr-background-lighter: ;
+    --clr-background-darker: ;
+  }
+
+  /* costum theme switch override: Light theme */
+  :root.light-theme {
+    --clr-text: black;
+    --clr-text-lighter: ;
+    --clr-link: ;
+    --clr-link-hover: ;
+    --clr-background: white;
+    --clr-background-lighter: ;
+    --clr-background-darker: ;
+  }
+}
+/*----------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  /* padding: 0;
+  margin: 0; */
+}
+
+html {
+  color: var(--clr-text);
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--clr-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", Verdana, sans-serif;
+  /*font-weight: normal;*/
+  text-align: center;
+  /*text-transform: uppercase;*/
+
+  padding: 0;
+  margin: 0.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--pad-main);
+  border-radius: var(--brd-radius-main);
+  background-color: gray;
+}
+
+p {
+  text-align: justify;
+}
+
+.horizontal-scroll-wrapper {
+
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.btn-theme-toggle .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
